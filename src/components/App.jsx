@@ -1,7 +1,7 @@
 // import Options from "./Options/Options";
 // import Feedback from "./Feedback/Feedback";
 // import Description from "./Description/Description";
-import ContactForm from '../components/ContactForm/ContactForm';
+import ContactForm from './ContactForm/ContactForm';
 // import { useEffect } from "react";
 // import { useState } from "react";
 import "./App.css";

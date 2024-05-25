@@ -14,7 +14,7 @@ const ContactFormSchema = Yup.object().shape({
     number:'Number'
   };
 
-const ContactForm = ({ submit }) => {
+const ContactForm = () => {
   const nameFieldId = useId();
   const numberFieldId = useId();
 
