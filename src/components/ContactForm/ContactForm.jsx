@@ -10,8 +10,8 @@ const ContactFormSchema = Yup.object().shape({
 });
 
   const initialValues = {
-    username: "Name",
-    number:'Number'
+    username:"",
+    number:''
   };
 
 const ContactForm = () => {
@@ -31,13 +31,13 @@ return (
     >
     <Form>
       <div>
-      <label htmlFor="nameFieldId">Name</label>
+      <label htmlFor={nameFieldId}>Name</label>
       <Field type='text' name='username' id={nameFieldId} />
       <ErrorMessage name='username' component='span' />
       </div>
 
       <div>
-      <label htmlFor="numberFieldId">Number</label>
+      <label htmlFor={numberFieldId}>Number</label>
       <Field type='number' name='phone' id={numberFieldId} />
       <ErrorMessage name='phone' component='span' />
       </div>
