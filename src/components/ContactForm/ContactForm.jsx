@@ -1,4 +1,4 @@
-import some from './Description'
+import some from './ContactForm'
 
 const Description = ({ title, text }) => {
   return (
@@ -12,4 +12,4 @@ const Description = ({ title, text }) => {
   );
 };
 
-export default Description;
+export default ContactForm;
