@@ -1,15 +1,14 @@
-import some from './Feedback.module.css'
+// import some from "./Feedback.module.css";
 
-const Feedback = ({ feedback, totalFeedback, positiveFeedback }) => {
+const SearchBox = ({ filter, setFilter }) => {
   return (
-    <div>
-      <p className={some.item}>Good: {feedback.good}</p>
-      <p className={some.item}>Neutral: {feedback.neutral}</p>
-      <p className={some.item}>Bad: {feedback.bad}</p>
-      <p className={some.item}>Total Feedback: {totalFeedback}</p>
-      <p className={some.item}>Positive Feedback: {positiveFeedback}%</p>
-    </div>
+    <input
+        type="text"
+        placeholder="Search by name"
+        value={filter}
+        onChange={(e) => setFilter(e.target.value)}
+      />
   );
 };
 
-export default Feedback;
+export default SearchBox;
