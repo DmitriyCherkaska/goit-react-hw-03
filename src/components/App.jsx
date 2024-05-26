@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ContactForm from "./ContactForm/ContactForm";
 import SearchBox from "./SearchBox/SearchBox";
 import ContactList from "./ContactList/ContactList";
+import "./App.css";
 
 const App = () => {
   const initialContacts = [
@@ -37,7 +38,7 @@ const App = () => {
   const filteredContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
-  
+
   return (
     <div>
       <h1>Phonebook</h1>
