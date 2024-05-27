@@ -4,6 +4,7 @@ import SearchBox from "./SearchBox/SearchBox";
 import ContactList from "./ContactList/ContactList";
 import "./App.css";
 
+
 const App = () => {
   const initialContacts = [
     { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
@@ -13,6 +14,7 @@ const App = () => {
   ];
 
   const [contacts, setContacts] = useState(initialContacts);
+  console.log(contacts);
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
@@ -23,6 +25,7 @@ const App = () => {
   }, []);
 
   const addContact = (newContact) => {
+    console.log([...contacts, newContact]);
     setContacts([...contacts, newContact]);
   };
 
