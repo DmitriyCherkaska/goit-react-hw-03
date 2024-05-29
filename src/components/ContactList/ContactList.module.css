@@ -1,3 +1,6 @@
 .list {
-    color: aqua;
+    color: orange;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }

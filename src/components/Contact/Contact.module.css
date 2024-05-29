@@ -1,0 +1,32 @@
+.btn {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.item {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 220px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+}
+
+.number {
+   
+}
+
+.wrapper {
+}
