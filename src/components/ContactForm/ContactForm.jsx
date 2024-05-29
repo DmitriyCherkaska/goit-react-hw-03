@@ -1,13 +1,13 @@
-import some from './ContactForm.module.css'
+import some from "./ContactForm.module.css";
 // import { useId } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import {nanoid} from 'nanoid';
+import { nanoid } from "nanoid";
 
 const ContactForm = ({ addContact }) => {
   const initialValues = {
-    name: '',
-    number: '',
+    name: "",
+    number: "",
   };
 
   const ContactFormSchema = Yup.object().shape({
@@ -30,7 +30,7 @@ const ContactForm = ({ addContact }) => {
     console.log(newContact);
     addContact(newContact);
     resetForm();
-  }
+  };
 
   return (
     <Formik
@@ -39,19 +39,25 @@ const ContactForm = ({ addContact }) => {
       validateYupSchema={ContactFormSchema}
     >
       <Form>
-        <div className={some.name}>
-          <label className={some.username} htmlFor='name'>Name</label>
-          <Field type="text" name="name" id='name' />
-          <ErrorMessage name="name" component="span" />
-        </div>
+        <div className={some.container}>
+          <div className={some.name}>
+            <label className={some.username} htmlFor="name">
+              Name
+            </label>
+            <Field type="text" name="name" id="name" />
+            <ErrorMessage name="name" component="span" />
+          </div>
 
-        <div>
-          <label htmlFor='number'>Number</label>
-          <Field type="text" name="number" id='number' />
-          <ErrorMessage name="number" component="span" />
-        </div>
+          <div>
+            <label className={some.number} htmlFor="number">
+              Number
+            </label>
+            <Field type="text" name="number" id="number" />
+            <ErrorMessage name="number" component="span" />
+          </div>
 
-        <button type="submit">Add contact</button>
+          <button className={some.btn} type="submit">Add contact</button>
+        </div>
       </Form>
     </Formik>
   );
