@@ -3,10 +3,12 @@ import some from '../ContactList/ContactList.module.css'
 
 const ContactList = ({ contacts, deleteContact }) => {
   console.log(contacts);
+  return (
     <ul className={some.list}>
       {contacts.map(contact => (
         <Contact key={contact.id} contact={contact} deleteContact={deleteContact} />
       ))}
     </ul>
+  );
   };
 export default ContactList;
