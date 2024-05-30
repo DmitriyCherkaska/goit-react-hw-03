@@ -36,7 +36,7 @@ const ContactForm = ({ addContact }) => {
     <Formik
       initialValues={initialValues}
       onSubmit={handleSubmit}
-      validateYupSchema={ContactFormSchema}
+      validateSchema={ContactFormSchema}
     >
       <Form>
         <div className={some.container}>
