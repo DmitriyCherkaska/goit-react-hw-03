@@ -36,7 +36,7 @@ const ContactForm = ({ addContact }) => {
     <Formik
       initialValues={initialValues}
       onSubmit={handleSubmit}
-      validateSchema={ContactFormSchema}
+      validationSchema={ContactFormSchema}
     >
       <Form>
         <div className={some.container}>
